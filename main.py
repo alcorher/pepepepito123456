@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 from pydantic import BaseModel, EmailStr
 
 load_dotenv()
-url: str = os.getenv("supabase_url") or os.getenv("SUPABASE_URL")
-key: str = os.getenv("supabase_key") or os.getenv("SUPABASE_KEY")
+url: str = os.getenv("supabase_url") 
+key: str = os.getenv("supabase_key") 
 
 if not url or not key:
     raise RuntimeError("Faltan las credenciales de Supabase. Define SUPABASE_URL/SUPABASE_KEY en las variables de entorno.")
